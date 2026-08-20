@@ -1,0 +1,21 @@
+cff-version: 2.0.0.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Landers"
+    given-names: "Jordan"
+    orcid: "https://orcid.org/0000-0001-9772-7617"
+  - family-names: "Emile-Geay"
+    given-names: "Julien"
+    orcid: "https://orcid.org/0000-0001-5920-4751"
+  - family-names: "Khider"
+    given-names: "Deborah"
+    orcid: "https://orcid.org/0000-0001-7501-8430"
+  - family-names: "James"
+    given-names: "Alexander"
+    orcid: "https://orcid.org/0000-0001-8561-3188"
+
+title: "Solar influence on Holocene climate with CCM"
+version: v0.0.0b
+doi: 10.5281/zenodo.22032972
+date-released: 2026-08-20
+url: "https://github.com/LinkedEarth/hol_temp_tsi_ccm_pb"
