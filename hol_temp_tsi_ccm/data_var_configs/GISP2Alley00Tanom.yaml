@@ -1,0 +1,22 @@
+GISP2Alley00Tanom: #GISP2multiproxy:
+  archive_type: Glacier ice
+  author: Alley
+  lat:
+  lon:
+  obs_type: multiproxy
+  source: GISP2
+  var: temp
+  surrogate_ts:
+    csv_stem: pyleo_surr_GISP2multiproxy_temp
+    time: time
+    var: temp
+  real_data_ts:
+    csv_stem: GISP2multiproxy_temp
+    var: Alley_multiproxy_temp
+    time: time
+  unit: "\xB0C"
+  url:
+  var_label: GISP2; Alley, 2000
+  var_name: Temp anomaly
+  year: '2000'
+  color: "xkcd:cobalt"

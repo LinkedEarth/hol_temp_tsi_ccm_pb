@@ -1,0 +1,22 @@
+GISP2Doering22T15N:
+  archive_type: Glacier ice
+  author: Döring et al.
+  lat:
+  lon:
+  obs_type: temp (d15N Goujon)
+  source: GISP2
+  var: temp
+  surrogate_ts:
+    csv_stem: pyleo_surr_Doering_2022_A_T15N_goujon_decavg_temp
+    time: time
+    var: temp
+  real_data_ts:
+    csv_stem: Doering_2022_A_T15N_goujon_decavg_temp
+    var: doering22T15Ngoujon_decavg_temp
+    time: time
+  unit: "\xB0C"
+  url: "https://doi.pangaea.de/10.1594/PANGAEA.943597"
+  var_label: GISP2; Döring et al., 2022
+  var_name: Temp anomaly
+  year: '2022'
+  color: "xkcd:deep teal"

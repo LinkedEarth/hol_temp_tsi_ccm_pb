@@ -1,0 +1,23 @@
+NGRIP1Seierstad14d18O: #GISP2Alley00Tanom
+  archive_type: Glacier ice
+  author: Seierstad et al.
+  lat:
+  lon:
+  obs_type: d18O
+  source: NGRIP1
+  var: d18O
+  surrogate_ts:
+    csv_stem: pyleo_surr_Seierstad_2014_NGRIP1_d18O_decavg_d18O
+    time: time
+    var: d18O
+  real_data_ts:
+    csv_stem: Seierstad_2014_NGRIP1_d18O_decavg_d18O
+    var: NGRIP1seierstad14d18O_decavg_d18O
+    time: time
+  unit: "‰"
+  url: "https://doi.pangaea.de/10.1594/PANGAEA.943597"
+  var_label: NGRIP1; Seierstad et al., 2014
+  var_name: d18O
+  year: '2014'
+  color:  "xkcd:greeny blue"
+

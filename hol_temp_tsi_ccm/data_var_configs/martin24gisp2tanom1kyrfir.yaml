@@ -1,0 +1,23 @@
+martin24gisp2tanom1kyrfir:
+  cite: martin24
+  archive_type: Glacier ice
+  author: Martin et al.
+  lat: null
+  lon: null
+  obs_type: tanom
+  source: GISP2
+  var: temp
+  surrogate_ts:
+    csv_stem: pyleo_surr_martin24_gisp2tanom_temp__1kyrfir
+    time: time
+    var: temp
+  real_data_ts:
+    csv_stem: martin24_gisp2tanom_temp__1kyrfir
+    var: martin24gisp2tanom1kyrfir
+    time: time
+  unit: °C
+  url: https://doi.pangaea.de/10.1594/PANGAEA.943597
+  var_label: GISP2; Martin et al., 2024 (1kyr FIR high-pass)
+  var_name: Temp anomaly (1kyr FIR high-pass)
+  year: '2024'
+  color: xkcd:royal blue

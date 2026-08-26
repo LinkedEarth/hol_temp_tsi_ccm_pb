@@ -1,0 +1,23 @@
+seierstad14gisp2d18o1kyrfir:
+  cite: seierstad14
+  archive_type: Glacier ice
+  author: Seierstad et al.
+  lat:
+  lon:
+  obs_type: d18O
+  source: GISP2
+  var: d18O
+  surrogate_ts:
+    csv_stem: pyleo_surr_seierstad14_gisp2d18o_d18o__1kyrfir
+    time: time
+    var: d18O
+  real_data_ts:
+    csv_stem: seierstad14_gisp2d18o_d18o__1kyrfir
+    var: seierstad14gisp2d18o1kyrfir
+    time: time
+  unit: "‰"
+  url: "https://doi.pangaea.de/10.1594/PANGAEA.943597"
+  var_label: GISP2; Seierstad et al., 2014 (1kyr FIR high-pass)
+  var_name: d18O (1kyr FIR high-pass)
+  year: '2014'
+  color: xkcd:azure

@@ -1,0 +1,35 @@
+pal:
+  TSI (surr) influences temp: "#157F8B" #"xkcd:dark orange"
+  TSI influences temp: "#C11123"
+  TSI influences temp (surr): "#FFE096" #"xkcd:goldenrod"
+  temp (surr) influences TSI: steelblue
+  temp influences TSI: "#305996"
+  temp influences TSI (surr): dodgerblue
+  TSI (surr) influences d18O: firebrick
+  TSI influences d18O: red
+  TSI influences d18O (surr): dodgerblue
+  d18O (surr) influences TSI: navy
+  d18O influences TSI: navy
+  d18O influences TSI (surr): dodgerblue
+  vieira: "xkcd:orangeish"
+  Vieira11TSI: "xkcd:orangeish"
+  Vieira11TSILinear: "xkcd:dark orange"
+  wu: darkred
+  Wu18TSI: darkred
+  Wu18TSILinear: "xkcd:indian red"
+  erb: "xkcd:light eggplant"
+  Erb22daGMST: "xkcd:light eggplant"
+  Erb22daGMSTLinear: "xkcd:velvet"
+  GISP2Alley00TanomLinear:  "steelblue"
+  GISP2multiproxy:  "xkcd:cobalt"
+  GISP2Alley00Tanom:  "xkcd:cobalt"
+  GISP2Doering22T15N: "xkcd:deep teal"
+  GISP2Doering22T15NLinear: "xkcd:teal blue"
+  GISP2Martin24TanomLinear: "xkcd:royal"
+  GISP2Martin24Tanom: blue
+  GISP2Seierstad14d18O: "xkcd:mid blue"
+  GISP2Seierstad14d18OLinear: "xkcd:cerulean"
+  NGRIP1Seierstad14d18O:  "xkcd:greeny blue"
+  NGRIP1Seierstad14d18OLinear: "xkcd:spruce"
+  NGRIPMartin24Tanom: "xkcd:light navy"
+  NGRIPMartin24TanomLinear:  "xkcd:deep sky blue"

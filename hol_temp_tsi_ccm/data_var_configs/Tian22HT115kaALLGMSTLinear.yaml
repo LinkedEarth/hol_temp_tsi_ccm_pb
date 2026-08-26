@@ -1,0 +1,22 @@
+Tian22HT115kaALLGMSTLinear:
+  archive_type: gcm
+  author: Tian et al.
+  lat:
+  lon:
+  obs_type: gmst
+  source: HT-11.5ka all
+  var: temp
+  surrogate_ts:
+    csv_stem: pyleo_surr_tian22_ht115kaallgmst_temp_detrendedlinear
+    time: time
+    var: temp
+  real_data_ts:
+    csv_stem: tian22_ht115kaallgmst_temp_detrendedlinear
+    var: tian22ht115kaallgmst_temp_detrendedlinear
+    time: time
+  unit: "\xB0C"
+  url:
+  var_label: Tian et al., 2022 HT-11.5ka all (detrended)
+  var_name: GMST anomaly
+  year: '2022'
+  color: xkcd:olive

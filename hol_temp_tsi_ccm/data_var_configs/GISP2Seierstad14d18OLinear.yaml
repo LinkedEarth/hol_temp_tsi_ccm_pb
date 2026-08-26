@@ -1,0 +1,23 @@
+GISP2Seierstad14d18OLinear: #GISP2Alley00Tanom
+  archive_type: Glacier ice
+  author: Seierstad et al.
+  lat:
+  lon:
+  obs_type: d18O
+  source: GISP2
+  var: d18O
+  surrogate_ts:
+    csv_stem: pyleo_surr_Seierstad_2014_GISP2_d18O_decavg_d18O__detrendedlinear
+    time: time
+    var: d18O
+  real_data_ts:
+    csv_stem: Seierstad_2014_GISP2_d18O_decavg_d18O__detrendedlinear
+    var: GISP2seierstad14d18O_decavg_d18O__detrendedlinear
+    time: time
+  unit: "‰"
+  url: "https://doi.pangaea.de/10.1594/PANGAEA.943597"
+  var_label: GISP2; Seierstad et al., 2014 (detrended linear)
+  var_name: d18O
+  year: '2014'
+  color: "xkcd:cerulean"
+

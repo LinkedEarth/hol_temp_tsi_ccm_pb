@@ -1,0 +1,21 @@
+Wu18TSI:
+  archive_type: reconstruction
+  author: Wu et al.
+  lat:
+  lon:
+  surrogate_ts:
+    csv_stem: pyleo_surr_wu_TSI
+    time: time
+    var: TSI
+  real_data_ts:
+    csv_stem: wu_TSI
+    var: wu_tsi
+    time: time
+  obs_type: model
+  source: model
+  unit: W/m^2
+  var: TSI
+  var_label: Wu et al., 2018
+  var_name: TSI anomaly
+  year: '2018'
+  color: darkred

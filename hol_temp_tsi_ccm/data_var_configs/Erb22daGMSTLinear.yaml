@@ -1,0 +1,22 @@
+Erb22daGMSTLinear:
+  archive_type: mixed
+  author: Erb et al.
+  lat:
+  lon:
+  obs_type: GMST DA
+  source: Data Assimilation
+  var: temp
+  surrogate_ts:
+    csv_stem: pyleo_surr_Erb_2022_da_GMST_decavg_temp__detrendedlinear
+    time: time
+    var: temp
+  real_data_ts:
+    csv_stem: Erb_2022_da_GMSTanom_decavg_temp__detrendedlinear
+    var: erb22GMSTanom_decavg_temp__detrendedlinear
+    time: time
+  unit: "\xB0C"
+  url:
+  var_label: Erb et al, 2022 (detrended)
+  var_name: GMST anomaly
+  year: '2022'
+  color: "xkcd:velvet"

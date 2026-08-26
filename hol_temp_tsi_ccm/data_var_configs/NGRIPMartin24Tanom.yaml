@@ -1,0 +1,23 @@
+NGRIPMartin24Tanom: #GISP2Alley00Tanom
+  archive_type: Glacier ice
+  author: Martin et al.
+  lat:
+  lon:
+  obs_type: T anom
+  source: NGRIP
+  var: temp
+  surrogate_ts:
+    csv_stem: pyleo_surr_Martin_2024_NGRIP_Tanom_decavg_temp
+    time: time
+    var: temp
+  real_data_ts:
+    csv_stem: Martin_2024_NGRIP_Tanom_decavg_temp
+    var: NGRIPmartin24Tanom_decavg_temp
+    time: time
+  unit: "\xB0C"
+  url: "https://doi.pangaea.de/10.1594/PANGAEA.943597"
+  var_label: NGRIP; Martin et al., 2024
+  var_name: Temp anomaly
+  year: '2024'
+  color: "xkcd:light navy"
+

@@ -1,0 +1,23 @@
+alley00gisp2multiproxy1kyrfir:
+  cite: alley00
+  archive_type: Glacier ice
+  author: Alley
+  lat: null
+  lon: null
+  obs_type: multiproxy
+  source: GISP2
+  var: temp
+  surrogate_ts:
+    csv_stem: pyleo_surr_alley00_gisp2multiproxy_temp__1kyrfir
+    time: time
+    var: temp
+  real_data_ts:
+    csv_stem: alley00_gisp2multiproxy_temp__1kyrfir
+    var: alley00gisp2multiproxy1kyrfir
+    time: time
+  unit: °C
+  url: null
+  var_label: GISP2; Alley, 2000 (1kyr FIR high-pass)
+  var_name: Temp anomaly (1kyr FIR high-pass)
+  year: '2000'
+  color: xkcd:sky

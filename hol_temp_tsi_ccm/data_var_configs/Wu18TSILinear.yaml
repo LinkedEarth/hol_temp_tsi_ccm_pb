@@ -1,0 +1,21 @@
+Wu18TSILinear:
+  archive_type: reconstruction
+  author: Wu et al.
+  lat:
+  lon:
+  surrogate_ts:
+    csv_stem: pyleo_surr_Wu_2018_TSIanom_decavg__detrendedlinear
+    time: time
+    var: TSI
+  real_data_ts:
+    csv_stem: Wu_2018_TSIanom_decavg__detrendedlinear
+    var: wu18TSIanom_decavg__detrendedlinear
+    time: time
+  obs_type: model
+  source: model
+  unit: W/m^2
+  var: TSI
+  var_label: Wu et al., 2018 (detrended)
+  var_name: TSI anomaly
+  year: '2018'
+  color: "xkcd:indian red"

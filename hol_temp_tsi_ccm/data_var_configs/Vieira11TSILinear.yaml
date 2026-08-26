@@ -1,0 +1,21 @@
+Vieira11TSILinear:
+  archive_type: reconstruction
+  author: Vieira et al.
+  lat:
+  lon:
+  surrogate_ts:
+    csv_stem: pyleo_surr_vieira_TSI__detrendedlinear
+    time: time
+    var: TSI
+  real_data_ts:
+    csv_stem: Vieira_2011_TSIanom_decavg_TSI__detrendedlinear
+    var: vieira11TSIanom_decavg_tsi__detrendedlinear
+    time: time
+  obs_type: model
+  source: model
+  unit: W/m^2
+  var: TSI
+  var_label: Vieira et al., 2011 (detrended)
+  var_name: TSI anomaly
+  year: '2011'
+  color: "xkcd:dark orange"

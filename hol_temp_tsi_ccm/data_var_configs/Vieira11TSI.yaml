@@ -1,0 +1,21 @@
+Vieira11TSI: #vieira: #Vieira11TSI
+  archive_type: reconstruction
+  author: Vieira et al.
+  lat:
+  lon:
+  surrogate_ts:
+    csv_stem: pyleo_surr_vieira_TSI
+    time: time
+    var: TSI
+  real_data_ts:
+    csv_stem: vieira_TSI
+    var: vieira_tsi
+    time: time
+  obs_type: model
+  source: model
+  unit: W/m^2
+  var: TSI
+  var_label: Vieira et al., 2011
+  var_name: TSI anomaly
+  year: '2011'
+  color: "xkcd:orangeish"

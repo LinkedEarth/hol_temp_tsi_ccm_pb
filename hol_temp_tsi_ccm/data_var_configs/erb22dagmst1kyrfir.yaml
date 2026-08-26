@@ -1,0 +1,23 @@
+erb22dagmst1kyrfir:
+  cite: erb22
+  archive_type: mixed
+  author: Erb et al.
+  lat: null
+  lon: null
+  obs_type: gmst
+  source: da
+  var: temp
+  surrogate_ts:
+    csv_stem: pyleo_surr_erb22_dagmst_temp__1kyrfir
+    time: time
+    var: temp
+  real_data_ts:
+    csv_stem: erb22_dagmst_temp__1kyrfir
+    var: erb22dagmst1kyrfir
+    time: time
+  unit: °C
+  url: null
+  var_label: Erb et al, 2022 (1kyr FIR high-pass)
+  var_name: GMST anomaly (1kyr FIR high-pass)
+  year: '2022'
+  color: xkcd:raspberry
