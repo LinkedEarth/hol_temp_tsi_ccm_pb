@@ -24,7 +24,7 @@ project:
     - figures
 
   toc:
-    - file: README.md
+    - file: intro.md
       title: Overview
 
     - title: "Part 1: Data Preparation & Exploration"
