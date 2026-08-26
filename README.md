@@ -9,7 +9,7 @@ Variations in Total Solar Irradiance (TSI) have long been hypothesized to influe
 global mean surface temperature (GMST) on multidecadal-to-millennial timescales, but
 empirical evidence has remained elusive. This paleobook explores the link between
 solar variability and climate over the pre-industrial Holocene using **Convergent
-Cross-Mapping (CCM)**, a nonlinear causal-inference framework, applied to four
+Cross-Mapping (CCM)** (Sugihara et al., 2012), a nonlinear causal-inference framework, applied to four
 temperature–TSI dyads spanning two temperature reconstructions (a global mean
 reconstruction, ERB22, and a central-Greenland record, ALLEY00) and two TSI
 reconstructions (VIEIRA11, WU18).
@@ -37,28 +37,28 @@ below.
 2. **Embedding & Methodology** — choosing CCM's embedding parameters (E, τ)
 3. **CCM: From Single Run to Parameter Sweep** — the causal-inference pipeline for
    one dyad, in increasing scope
-4. **Multiplots: Results Across Variables** — pulling results together across multiple dyads
+4. **Results from Multiple Dyads** — pulling together CCM results across all four dyads
 5. **Supplementary Analyses** — CCM vs. simple correlation, and other supporting work
 6. **Utilities** — CCM configuration notebooks used throughout the pipeline (not
    narrative, but rerun as needed)
 
 ## Figure-to-Notebook Mapping
 
-| Figure | Notebook |
-|---|---|
-| Fig. 1 (data & power spectra) | [`0_Datasets/3_plot__Fig1_real_ts_psd_unified`](notebooks/0_Datasets/3_plot__Fig1_real_ts_psd_unified.ipynb) |
-| Fig. 2 (CCM workflow schematic) | not code-generated |
-| Fig. 3 (main result grid) | [`3_Multiplots/1_plot__DataGroup_grid_untreated_2x2__final_result_grid`](notebooks/3_Multiplots/1_plot__DataGroup_grid_untreated_2x2__final_result_grid.ipynb) |
-| Fig. S1 (choosing E, τ) | [`1_Embedding/1_plot__FigS1_embedding`](notebooks/1_Embedding/1_plot__FigS1_embedding.ipynb) |
-| Fig. S2 (simplex self-prediction) | [`1_Embedding/2_plot__FigS2_simplex`](notebooks/1_Embedding/2_plot__FigS2_simplex.ipynb) |
-| Fig. S3 (library size–ρ trajectories) | [`2_CCM_single_dyad/plot__DataGroup_libsize_update`](notebooks/2_CCM_single_dyad/plot__DataGroup_libsize_update.ipynb) |
-| Fig. S4 (final ρ vs. lag) | [`2_CCM_single_dyad/plot__DataGroup_lag`](notebooks/2_CCM_single_dyad/plot__DataGroup_lag.ipynb) |
-| Fig. S5 (raw/detrended/high-pass comparison) | [`0_Datasets/2_setup__detrend_highpass_1kyr`](notebooks/0_Datasets/2_setup__detrend_highpass_1kyr.ipynb) |
-| Fig. S6 (full result overview) | [`3_Multiplots/2_plot__DataGroup_grid__final_result_grid`](notebooks/3_Multiplots/2_plot__DataGroup_grid__final_result_grid.ipynb) |
-| Fig. S7 (lag choice) | [`3_Multiplots/2_plot__DataGroup_grid__final_result_grid`](notebooks/3_Multiplots/2_plot__DataGroup_grid__final_result_grid.ipynb) |
-| Fig. S8 (simple correlation, all dyads) | [`4_Extras/2_plot__corr_lag_tau_resultsgrid`](notebooks/4_Extras/2_plot__corr_lag_tau_resultsgrid.ipynb) |
-| Fig. S9 (CCM skill at optimal lag) | [`3_Multiplots/2_plot__DataGroup_grid__final_result_grid`](notebooks/3_Multiplots/2_plot__DataGroup_grid__final_result_grid.ipynb) |
-| Fig. S10 (CCM − simple-correlation difference) | *to be confirmed* |
+| Figure                                                                                       | Notebook |
+|----------------------------------------------------------------------------------------------|---|
+| Fig. 1 (data & power spectra)                                                                | [Raw Data & Power Spectra (Figures 1 & S5)](notebooks/0_Datasets/3_plot__Fig1_real_ts_psd_unified.ipynb) |
+| Fig. 2 ([CCM workflow schematic](figures/Fig2__workflow_diag/stepwise_CCM_workflow_lag.pdf)) | not code-generated |
+| Fig. 3 (main result grid)                                                                    | [Main Result Grid (Figure 3)](notebooks/3_CCM_multi_dyad/1_plot__DataGroup_grid_untreated_2x2__final_result_grid.ipynb) |
+| Fig. S1 (choosing E, τ)                                                                      | [Choosing E and τ (Figure S1)](notebooks/1_Embedding/1_plot__FigS1_embedding.ipynb) |
+| Fig. S2 (simplex self-prediction)                                                            | [Simplex Self-Prediction (Figure S2)](notebooks/1_Embedding/2_plot__FigS2_simplex.ipynb) |
+| Fig. S3 (library size–ρ trajectories)                                                        | [Library Size–ρ Trajectories Across Lags (Figure S3)](notebooks/2_CCM_single_dyad/2_plot__DataGroup_libsize_update.ipynb) |
+| Fig. S4 (final ρ vs. lag)                                                                    | [Final ρ Across (E, τ) Configurations (Figure S4)](notebooks/2_CCM_single_dyad/3_plot__DataGroup_lag.ipynb) |
+| Fig. S5 (raw/detrended/high-pass comparison)                                                 | [Detrending & High-Pass Filtering (Figure S5)](notebooks/0_Datasets/2_setup__detrend_highpass_1kyr.ipynb) |
+| Fig. S6 (full result overview)                                                               | [Full Result Overview (Figures S6, S7, S9)](notebooks/3_CCM_multi_dyad/2_plot__DataGroup_grid__final_result_grid.ipynb) |
+| Fig. S7 (lag choice)                                                                         | [Full Result Overview (Figures S6, S7, S9)](notebooks/3_CCM_multi_dyad/2_plot__DataGroup_grid__final_result_grid.ipynb) |
+| Fig. S8 (simple correlation, all dyads)                                                      | [Simple Correlation, All Dyads (Figure S8)](notebooks/4_Extras/2_plot__corr_lag_tau_resultsgrid.ipynb) |
+| Fig. S9 (CCM skill at optimal lag)                                                           | [Full Result Overview (Figures S6, S7, S9)](notebooks/3_CCM_multi_dyad/2_plot__DataGroup_grid__final_result_grid.ipynb) |
+| Fig. S10 (CCM − simple-correlation difference)                                               | computed as Fig. S9 minus Fig. S8; no dedicated notebook yet |
 
 ## Data & Reproducibility
 
@@ -92,6 +92,7 @@ To build this book locally:
 
 ```bash
 pip install mystmd
+brew install imagemagick webp
 myst build --html
 ```
 
