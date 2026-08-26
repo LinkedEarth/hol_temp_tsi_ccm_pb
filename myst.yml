@@ -1,0 +1,99 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 51ced8e0-4a66-4bec-84ae-d4fcb4b2edd1
+  title: A Causal Examination of the Solar Influence on Holocene Climate
+  description: |
+    Convergent Cross-Mapping analysis testing whether Total Solar Irradiance
+    causally influences Holocene temperature variability.
+  authors:
+    - name: Jordan P. Landers
+    - name: Julien Emile-Geay
+    - name: Alexander K. James
+    - name: Stephan B. Munch
+    - name: Deborah Khider
+    - name: Edouard Bard
+  keywords: [paleoclimate, solar forcing, causality, CCM, Holocene, TSI]
+  github: https://github.com/jordanplanders/hol_temp_tsi_ccm_pb
+  jupyter:
+    binder:
+      url: https://mybinder.org
+      repo: jordanplanders/hol_temp_tsi_ccm_pb
+      ref: main
+  static_files:
+    - figures
+
+  toc:
+    - file: README.md
+      title: Overview
+
+    - title: "Part 1: Data Preparation & Exploration"
+      children:
+        - file: notebooks/0_Datasets/_overview.md
+          title: Overview
+        - file: notebooks/0_Datasets/1_setup__standardize_time_axes.ipynb
+          title: Standardize Time Axes
+        - file: notebooks/0_Datasets/2_setup__detrend_highpass_1kyr.ipynb
+          title: "Detrending & High-Pass Filtering (Figure S5)"
+        - file: notebooks/0_Datasets/3_plot__Fig1_real_ts_psd_unified.ipynb
+          title: "Raw Data & Power Spectra (Figures 1 & S5)"
+
+    - title: "Part 2: Embedding & Methodology"
+      children:
+        - file: notebooks/1_Embedding/_overview.md
+          title: Overview
+        - file: notebooks/1_Embedding/1_plot__FigS1_embedding.ipynb
+          title: "Choosing E and τ (Figure S1)"
+        - file: notebooks/1_Embedding/2_plot__FigS2_simplex.ipynb
+          title: "Simplex Self-Prediction (Figure S2)"
+
+    - title: "Part 3: CCM — From Single Run to Parameter Sweep"
+      children:
+        - file: notebooks/2_CCM_single_dyad/_overview.md
+          title: Overview
+        - file: notebooks/2_CCM_single_dyad/1_run__CCMlocally.ipynb
+          title: A Single CCM Calculation
+        - file: notebooks/2_CCM_single_dyad/2_plot__DataGroup_libsize_update.ipynb
+          title: "Library Size–ρ Trajectories Across Lags (Figure S3)"
+        - file: notebooks/2_CCM_single_dyad/3_plot__DataGroup_lag.ipynb
+          title: "Final ρ Across (E, τ) Configurations (Figure S4)"
+
+    - title: "Part 4: Results from Multiple Dyads"
+      children:
+        - file: notebooks/3_CCM_multi_dyad/_overview.md
+          title: Overview
+        - file: notebooks/3_CCM_multi_dyad/0_calc__final_result_grid.ipynb
+          title: Assemble Results Across Dyads
+        - file: notebooks/3_CCM_multi_dyad/1_plot__DataGroup_grid_untreated_2x2__final_result_grid.ipynb
+          title: "Main Result Grid (Figure 3)"
+        - file: notebooks/3_CCM_multi_dyad/2_plot__DataGroup_grid__final_result_grid.ipynb
+          title: "Full Result Overview (Figures S6, S7, S9)"
+
+    - title: "Supplementary Analyses"
+      children:
+        - file: notebooks/4_Extras/_overview.md
+          title: Overview
+        - file: notebooks/4_Extras/1_calc__corr_lag_tau_resultsgrid.ipynb
+          title: Calculate Correlation vs. Lag/Tau
+        - file: notebooks/4_Extras/2_plot__corr_lag_tau_resultsgrid.ipynb
+          title: "Simple Correlation, All Dyads (Figure S8)"
+#        - file: notebooks/4_Extras/calc__single_dyad_corr_lag_tau_resultsgrid.ipynb
+#          title: Single-Dyad Correlation Detail
+#        - file: notebooks/0_Datasets/calc__pairwise_correlation_filtered_timeseries.ipynb
+#          title: "Pairwise Correlation (in progress)"
+
+    - title: "Utilities: CCM Configuration"
+      children:
+        - file: notebooks/Utilities/_overview.md
+          title: Overview
+        - file: notebooks/Utilities/1_setup__expand_master_param_list.ipynb
+          title: Expand Master Parameter List
+        - file: notebooks/Utilities/2_setup__configure_CCM_run_sets.ipynb
+          title: Configure CCM Run Sets
+
+site:
+  template: book-theme
+  options:
+    header: {}
+    logo: logo.png
+    logo_text: "Holocene Sun-Climate causality with CCM"
