@@ -1,0 +1,105 @@
+proj_name: Erb22daGMST_Vieira11TSI #Erb22daGMST_Wu18TSI
+prefix: ErGMVi
+doi: 10.6084/m9.figshare.30632411
+
+data_vars:
+  Erb22daGMST: Erb22daGMST
+  Wu18TSI : Vieira11TSI
+
+col:
+  var_id: Erb22daGMST
+  var: temp
+  long_label: GMST Anomaly
+target:
+  var_id: Vieira11TSI
+  var: TSI
+  long_label: Total Solar Irradiance
+
+csvs:
+  calc_grps: calc_grps
+  e_tau_grps: E_tau_grps
+
+calc_grps:
+  csv: calc_grp
+  query_keys:
+  - tau
+  - col_var_id
+  - E
+  - target_var_id
+  - knn
+  - Tp
+  - lag
+  - target_var
+  - col_var
+  - weighted
+  - train_ind_i
+
+hpc:
+  calc_dir: calc_local_tmp
+  output_dir: calc_refactor
+  raw_data_dir: data
+  surr_data_dir: surrogates
+  parameter_dir: parameters
+
+local:
+  calc_dir: calc_local_tmp
+  output_dir: calc_refactor
+  raw_data_dir: data
+  surr_data_dir: surrogates
+  parameter_dir: parameters
+
+ccm_config:
+  libsize_step: 5
+  max_libsize: 400
+  min_libsize: 25
+  min_window: 50
+
+
+intermediate:
+  csv:
+    dir: csv
+    dir_structure: knn_{knn}/tp_{Tp}/{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}
+    file_format: '{pset_id}_E{E}_tau{tau}_lag{lag}__{surr_var}{surr_num}'
+  sqlite:
+    dir: sqlite
+    dir_structure: run_dbs
+    file_format: run_{run_id}
+
+output:
+  csv:
+    dir: csv
+    dir_structure: knn_{knn}/tp_{Tp}/{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}
+    file_format: '{pset_id}_E{E}_tau{tau}_lag{lag}__{surr_var}{surr_num}'
+    grp_dir_structure: '{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}'
+  parquet:
+    dir: parquet
+    dir_structure: knn_{knn}/tp_{Tp}/{col_var_id}_{target_var_id}/E{E}_tau{tau}
+    file_format: E{E}_tau{tau}_lag{lag}
+    grp_dir_structure: '{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}'
+  sqlite:
+    dir: sqlite
+    dir_structure: null
+    file_format: collector_{col_var_id}_{target_var_id}
+
+  dir_structure: knn_{knn}/tp_{Tp}/{col_var_id}_{target_var_id}/E{E}_tau{tau}
+  grp_dir_structure: '{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}'
+  non_grp_structure: knn_{knn}/tp_{Tp}
+
+parameters:
+  name: parameters
+  spec_d: param_d
+
+
+raw_data:
+  delta_t: 10
+  name: data
+  time_unit: years
+  time_var: time
+
+vars:
+  col: temp
+  target: TSI
+
+
+
+

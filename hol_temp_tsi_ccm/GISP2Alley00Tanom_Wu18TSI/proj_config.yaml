@@ -1,0 +1,101 @@
+proj_name: GISP2Alley00Tanom_Wu18TSI
+prefix: AlWuGI
+doi: 10.6084/m9.figshare.30632540
+
+data_vars:
+  GISP2Alley00Tanom: GISP2Alley00Tanom
+  Wu18TSI : Wu18TSI
+
+col:
+  var_id: GISP2Alley00Tanom #Erb22daGMST
+  var: temp
+  long_label: Temp Anomaly
+target:
+  var_id: Wu18TSI #Wu18TSILinear
+  var: TSI
+  long_label: Total Solar Irradiance
+
+csvs:
+  calc_grps: calc_grps
+  e_tau_grps: E_tau_grps
+
+calc_grps:
+  csv: calc_grp
+  query_keys:
+  - tau
+  - col_var_id
+  - E
+  - target_var_id
+  - knn
+  - Tp
+  - lag
+  - target_var
+  - col_var
+  - weighted
+  - train_ind_i
+
+hpc:
+  calc_dir: calc_local_tmp
+  output_dir: calc_refactor
+  raw_data_dir: data
+  surr_data_dir: surrogates
+  parameter_dir: parameters
+
+local:
+  calc_dir: calc_local_tmp
+  output_dir: calc_refactor
+  raw_data_dir: data
+  surr_data_dir: surrogates
+  parameter_dir: parameters
+
+ccm_config:
+  libsize_step: 5
+  max_libsize: 400
+  min_libsize: 25
+  min_window: 50
+
+
+intermediate:
+  csv:
+    dir: csv
+    dir_structure: knn_{knn}/tp_{Tp}/{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}
+    file_format: '{pset_id}_E{E}_tau{tau}_lag{lag}__{surr_var}{surr_num}'
+  sqlite:
+    dir: sqlite
+    dir_structure: run_dbs
+    file_format: run_{run_id}
+
+
+output:
+  csv:
+    dir_structure: 'knn_{knn}/tp_{Tp}/{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}'
+    file_format: '{pset_id}_E{E}_tau{tau}_lag{lag}__{surr_var}{surr_num}'
+    grp_dir_structure: '{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}'
+
+  parquet:
+    dir_structure: 'knn_{knn}/tp_{Tp}/{col_var_id}_{target_var_id}/E{E}_tau{tau}'
+    file_format: 'E{E}_tau{tau}_lag{lag}'
+    grp_dir_structure: '{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}'
+
+  dir_structure: knn_{knn}/tp_{Tp}/{col_var_id}_{target_var_id}/E{E}_tau{tau}
+  grp_dir_structure: '{col_var_id}_{target_var_id}/E{E}_tau{tau}/lag{lag}'
+  non_grp_structure: knn_{knn}/tp_{Tp}
+
+parameters:
+  name: parameters
+  spec_d: param_d
+
+
+raw_data:
+  delta_t: 10
+  name: data
+  time_unit: years
+  time_var: time
+
+vars:
+  col: temp
+  target: TSI
+
+
+
+
