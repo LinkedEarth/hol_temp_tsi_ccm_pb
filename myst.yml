@@ -14,11 +14,11 @@ project:
     - name: Deborah Khider
     - name: Edouard Bard
   keywords: [paleoclimate, solar forcing, causality, CCM, Holocene, TSI]
-  github: https://github.com/jordanplanders/hol_temp_tsi_ccm_pb
+  github: https://github.com/LinkedEarth/hol_temp_tsi_ccm_pb
   jupyter:
     binder:
       url: https://mybinder.org
-      repo: jordanplanders/hol_temp_tsi_ccm_pb
+      repo: LinkedEarth/hol_temp_tsi_ccm_pb
       ref: main
   static_files:
     - figures
@@ -97,3 +97,5 @@ site:
     header: {}
     logo: logo.png
     logo_text: "Holocene Sun-Climate causality with CCM"
+    hide_authors: true
+
