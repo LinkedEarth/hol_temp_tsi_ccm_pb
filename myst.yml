@@ -14,6 +14,8 @@ project:
     - name: Deborah Khider
     - name: Edouard Bard
   keywords: [paleoclimate, solar forcing, causality, CCM, Holocene, TSI]
+  bibliography:
+    - references.bib
   github: https://github.com/LinkedEarth/hol_temp_tsi_ccm_pb
   jupyter:
     binder:

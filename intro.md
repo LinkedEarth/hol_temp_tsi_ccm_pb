@@ -43,14 +43,14 @@ below.
 
 Source datasets (all publicly available, as cited in the paper):
 
-- **Temperature**: GISP2/ALLEY00 (Alley, 2000), ERB22 (Erb et al., 2022)
-- **TSI**: VIEIRA11 (Vieira et al., 2011), WU18 (Wu et al., 2018)
+- **Temperature**: GISP2/ALLEY00 [@Alley:2000aa], ERB22 [@erb2022]
+- **TSI**: VIEIRA11 [@vieira2011], WU18 [@Wu:2018aa]
 
 CCM outputs are archived on [Figshare](https://doi.org/10.6084/m9.figshare.c.8150612)
-(Landers et al., 2026). Data used throughout the notebooks lives in
-`hol_temp_tsi_ccm/` (not a Python package — a data directory).
+[@Landers2026_ccm_dyad_figshare] for permanent, citable access. The same outputs also
+ship directly with this repository under `hol_temp_tsi_ccm/`, so each notebook runs against pre-computed results.
 
-Analysis parameters (dataset specifications, CCM sweep settings, plot colors) are
+Configuration parameters (dataset specifications, CCM sweep settings, plot colors) are
 centralized in [`proj_config.yaml`](proj_config.yaml), loaded directly by the
 notebooks. Modify it to adjust the parameter sweep or add new datasets.
 
@@ -64,12 +64,12 @@ jupyter lab
 ```
 
 This installs two packages central to the analysis:
-[pyEDM](https://github.com/jordanplanders/pyEDM), a Python implementation of
-Empirical Dynamic Modeling (EDM) — the family of nonlinear, equation-free
-time-series methods that Convergent Cross-Mapping belongs to — and
-[Cedarkit](https://github.com/jordanplanders/cedar_util), this project's own
-library of EDM/CCM data structures, run-configuration, and plotting utilities
-built on top of it.
+[pyEDM](https://github.com/jordanplanders/pyEDM) [@pyEDM], a Python implementation
+of Empirical Dynamic Modeling (EDM) — the family of nonlinear, equation-free
+time-series methods that Convergent Cross-Mapping [@sugihara2012detecting] belongs
+to — and [Cedarkit](https://github.com/jordanplanders/cedar_util)
+[@Landers2025_cedar_util], this project's own library of EDM/CCM data structures,
+run-configuration, and plotting utilities built on top of it.
 
 To build this book locally:
 
@@ -81,12 +81,13 @@ myst build --html
 
 ## Dependencies
 
-See [`environment.yml`](environment.yml). Core packages: `pyleoclim`, `pyEDM`,
-`cedarkit`, `xarray`, `pandas`, `numpy`, `matplotlib`, `polars`.
+See [`environment.yml`](environment.yml). Core packages: `pyleoclim`
+[@Pyleoclim:PP2022], `pyEDM` [@pyEDM], `cedarkit` [@Landers2025_cedar_util],
+`xarray`, `pandas`, `numpy`, `matplotlib`, `polars`.
 
 ## Software Citation
 
-The CCM analysis library, Cedarkit, is archived on
+The CCM analysis library, Cedarkit [@Landers2025_cedar_util], is archived on
 [Zenodo](https://doi.org/10.5281/zenodo.19992883) and
 [GitHub](https://github.com/jordanplanders/cedar_util).
 
