@@ -1,28 +1,10 @@
 # A Causal Examination of the Solar Influence on Holocene Climate
 
-## Overview
+A collection of Jupyter notebooks to reproduce key results from:
 
-Variations in Total Solar Irradiance (TSI) have long been hypothesized to influence
-global mean surface temperature (GMST) on multidecadal-to-millennial timescales, but
-empirical evidence has remained elusive. This paleobook explores the link between
-solar variability and climate over the pre-industrial Holocene using **Convergent
-Cross-Mapping (CCM)** (Sugihara et al., 2012), a nonlinear causal-inference framework, applied to four
-temperature–TSI dyads spanning two temperature reconstructions (a global mean
-reconstruction, ERB22, and a central-Greenland record, ALLEY00) and two TSI
-reconstructions (VIEIRA11, WU18).
-
-## Key Findings
-
-- TSI shows a discernible causal influence on temperature in ~80% of the (E, τ)
-  parameter configurations tested.
-- The influence is weaker but more consistently significant for the global mean
-  (ERB22); stronger but less consistently significant for the single high-latitude
-  site (ALLEY00/GISP2).
-- Solar forcing appears to have been a minor — but detectable — driver of
-  pre-industrial Holocene climate fluctuations, distinct from and much smaller than
-  anthropogenic forcing over the industrial era.
-- This empirical signal may serve as a benchmark for evaluating whether climate
-  models correctly capture such subtle, non-linear solar–climate dynamics.
+Landers, J.P., Emile-Geay, J., James, A.K., Munch, S.B., Khider, D., & Bard, E. (2026).
+A causal examination of the solar influence on Holocene climate. *Geophysical Research
+Letters*, 53, e2025GL121120. https://doi.org/10.1029/2025GL121120
 
 ## How to Navigate This Book
 
@@ -81,9 +63,13 @@ python -m ipykernel install --user --name=holoccm
 jupyter lab
 ```
 
-This installs [Cedarkit](https://github.com/jordanplanders/cedar_util) (CCM/EDM data
-structures and workflow tooling) and a pinned fork of
-[pyEDM](https://github.com/jordanplanders/pyEDM), both required by the notebooks.
+This installs two packages central to the analysis:
+[pyEDM](https://github.com/jordanplanders/pyEDM), a Python implementation of
+Empirical Dynamic Modeling (EDM) — the family of nonlinear, equation-free
+time-series methods that Convergent Cross-Mapping belongs to — and
+[Cedarkit](https://github.com/jordanplanders/cedar_util), this project's own
+library of EDM/CCM data structures, run-configuration, and plotting utilities
+built on top of it.
 
 To build this book locally:
 
@@ -98,13 +84,7 @@ myst build --html
 See [`environment.yml`](environment.yml). Core packages: `pyleoclim`, `pyEDM`,
 `cedarkit`, `xarray`, `pandas`, `numpy`, `matplotlib`, `polars`.
 
-## Citation
-
-This work is in press at *Geophysical Research Letters*:
-
-Landers, J.P., Emile-Geay, J., James, A.K., Munch, S.B., Khider, D., & Bard, E. (2026).
-A causal examination of the solar influence on Holocene climate. *Geophysical Research
-Letters*, 53, e2025GL121120. https://doi.org/10.1029/2025GL121120
+## Software Citation
 
 The CCM analysis library, Cedarkit, is archived on
 [Zenodo](https://doi.org/10.5281/zenodo.19992883) and
