@@ -14,7 +14,6 @@ fuller supplementary overview (Figs. S6, S7, S9) extends to six more dyads, addi
 Tian22, Döring22, and both Seierstad14 and Martin24 δ¹⁸O/temperature series, mostly
 against Wu18.
 
-![CCM untreated result grid](../../figures/Fig3__untreated_2x2__final_result_grid/Fig3_untreated_results_Grid_2x2.png)
 :::{figure} ../../figures/Fig3__untreated_2x2__final_result_grid/Fig3_untreated_results_Grid_2x2.png
 Summary grid representing results from the four core dyads (Figure 3 in Landers et al., 2026).  To see how it was assembled see [Main Result Grid (Figure 3)](1_plot__DataGroup_grid_untreated_2x2__final_result_grid.ipynb) 
 :::
