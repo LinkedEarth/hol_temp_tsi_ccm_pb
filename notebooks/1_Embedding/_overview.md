@@ -12,4 +12,9 @@ resulting snippet (Fig. S1), and shows why no single "optimal" configuration eme
 from simplex self-prediction (Fig. S2) — motivating the parameter-sweep approach used
 throughout the rest of this book.
 
-[![embedding vector deep dive](../../figures/FigS1__embedding/FigS1__embedding.png)](../../figures/FigS1__embedding/FigS1__embedding.pdf)
+:::{figure} ../../figures/FigS1__embedding/FigS1__embedding.png
+Embedding vectors for the GISP2 (Alley, 2000) temperature record across a grid of
+embedding dimension (E, columns) and time delay (τ, rows) values (Fig. S1): the
+target observation (blue) and the lagged points selected for its embedding vector
+(red), with horizontal bars showing each configuration's temporal coverage.
+:::
