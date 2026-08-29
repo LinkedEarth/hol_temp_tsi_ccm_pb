@@ -14,7 +14,8 @@ throughout the rest of this book.
 
 :::{figure} ../../figures/FigS1__embedding/FigS1__embedding.png
 Embedding vectors for the GISP2 (Alley, 2000) temperature record across a grid of
-embedding dimension (E, columns) and time delay (τ, rows) values (Fig. S1): the
-target observation (blue) and the lagged points selected for its embedding vector
-(red), with horizontal bars showing each configuration's temporal coverage.
+embedding dimension (E, columns) and time steps between points (τ, rows) values
+(Fig. S1): the target observation (blue) and the earlier points spaced τ steps
+apart selected for its embedding vector (red), with horizontal bars showing each
+configuration's temporal coverage.
 :::
