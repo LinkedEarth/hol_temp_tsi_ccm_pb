@@ -1,8 +1,12 @@
 # CCM: from a single run to a parameter sweep
 
-This section walks through Convergent Cross-Mapping at increasing scope:
+:::{figure} ../../figures/Fig2__workflow_diag/stepwise_CCM_workflow_lag.png
+Schematic of the CCM pipeline (Fig. 2): embedding each time series into vectors,
+building a library, finding nearest neighbors to predict the other variable, and
+repeating across library sizes and alignments to test for convergence.
+:::
 
-![CCM workflow](../../figures/Fig2__workflow_diag/stepwise_CCM_workflow_lag.png)
+This section walks through Convergent Cross-Mapping at increasing scope:
 
 1. **[A single CCM calculation](1_run__CCMlocally.ipynb)**, using the Erb22–Wu18 dyad:
    for one (E, τ, lag) configuration, estimate CCM skill (ρ) as a function of library
