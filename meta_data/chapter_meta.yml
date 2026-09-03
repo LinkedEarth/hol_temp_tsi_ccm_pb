@@ -80,6 +80,7 @@ parts:
     chapters:
       - shortname: "Calculate correlation across lag/τ"
         filename: "notebooks/4_Extras/1_calc__corr_lag_tau_resultsgrid"
+        thumbnail: corr_calc.png
         tags:
           domains: [correlation]
           packages: [numpy, pandas]
