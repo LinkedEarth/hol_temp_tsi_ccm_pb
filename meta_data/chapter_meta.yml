@@ -37,7 +37,7 @@ parts:
         filename: "notebooks/1_Embedding/2_plot__FigS2_simplex"
         thumbnail: simplex_sub.png
         tags:
-          domains: [simplex, 'param selection', 'self prediction']
+          domains: [simplex, 'self prediction']
           packages: [cedarkit, pyEDM]
 
   - caption: "Single-dyad CCM"
@@ -67,13 +67,13 @@ parts:
         filename: "notebooks/3_CCM_multi_dyad/1_plot__DataGroup_grid_untreated_2x2__final_result_grid"
         thumbnail: untreated_results_grid.png
         tags:
-          domains: [CCM, multi-dataset-analysis, 'data viz']
+          domains: [CCM, 'data viz']
           packages: [cedarkit, matplotlib]
       - shortname: "Extended CCM result overview"
         filename: "notebooks/3_CCM_multi_dyad/2_plot__DataGroup_grid__final_result_grid"
         thumbnail: extended_results.png
         tags:
-          domains: [multi-dataset-analysis, 'data viz', 'parameter sweep']
+          domains: ['data viz', 'parameter sweep']
           packages: [cedarkit, matplotlib]
 
   - caption: "Testing simple correlation"
