@@ -100,4 +100,5 @@ site:
     logo: logo.png
     logo_text: "Holocene Sun-Climate causality with CCM"
     hide_authors: true
+    folders: true
 
