@@ -8,16 +8,19 @@ parts:
     chapters:
       - shortname: "Standardize time axes"
         filename: "notebooks/0_Datasets/1_setup__standardize_time_axes"
+        thumbnail: standardize_ts.png
         tags:
           domains: ['common time', 'data-processing']
           packages: [xarray, pandas]
       - shortname: "Detrending & high-pass filtering"
         filename: "notebooks/0_Datasets/2_setup__detrend_highpass_1kyr"
+        thumbnail: detrend_filtering.png
         tags:
           domains: [data-processing, filtering, detrending]
           packages: [pyleoclim, pandas]
       - shortname: "Visualizing time series & power spectra"
         filename: "notebooks/0_Datasets/3_plot__Fig1_real_ts_psd_unified"
+        thumbnail: viz_ts_psd.png
         tags:
           domains: ['data viz', 'spectral analysis', 'solar forcing', 'Holocene temp']
           packages: [pyleoclim, matplotlib]
@@ -26,11 +29,13 @@ parts:
     chapters:
       - shortname: "Interpreting embedding params: E & τ"
         filename: "notebooks/1_Embedding/1_plot__FigS1_embedding"
+        thumbnail: embedding_sub.png
         tags:
           domains: ['time delay embedding', 'data viz']
           packages: [cedarkit, matplotlib]
       - shortname: "Determining E & τ with Simplex"
         filename: "notebooks/1_Embedding/2_plot__FigS2_simplex"
+        thumbnail: simplex_sub.png
         tags:
           domains: [simplex, 'param selection', 'self prediction']
           packages: [cedarkit, pyEDM]
