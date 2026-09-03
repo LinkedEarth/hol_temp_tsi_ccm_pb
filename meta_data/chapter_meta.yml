@@ -7,17 +7,17 @@ parts:
   - caption: "Data Preparation & Exploration"
     chapters:
       - shortname: "Standardize time axes"
-        filename: "0_Datasets/1_setup__standardize_time_axes"
+        filename: "notebooks/0_Datasets/1_setup__standardize_time_axes"
         tags:
           domains: ['common time', 'data-processing']
           packages: [xarray, pandas]
       - shortname: "Detrending & high-pass filtering"
-        filename: "0_Datasets/2_setup__detrend_highpass_1kyr"
+        filename: "notebooks/0_Datasets/2_setup__detrend_highpass_1kyr"
         tags:
           domains: [data-processing, filtering, detrending]
           packages: [pyleoclim, pandas]
       - shortname: "Visualizing time series & power spectra"
-        filename: "0_Datasets/3_plot__Fig1_real_ts_psd_unified"
+        filename: "notebooks/0_Datasets/3_plot__Fig1_real_ts_psd_unified"
         tags:
           domains: ['data viz', 'spectral analysis', 'solar forcing', 'Holocene temp']
           packages: [pyleoclim, matplotlib]
@@ -25,12 +25,12 @@ parts:
   - caption: "Choosing an embedding"
     chapters:
       - shortname: "Interpreting embedding params: E & τ"
-        filename: "1_Embedding/1_plot__FigS1_embedding"
+        filename: "notebooks/1_Embedding/1_plot__FigS1_embedding"
         tags:
           domains: ['time delay embedding', 'data viz']
           packages: [cedarkit, matplotlib]
       - shortname: "Determining E & τ with Simplex"
-        filename: "1_Embedding/2_plot__FigS2_simplex"
+        filename: "notebooks/1_Embedding/2_plot__FigS2_simplex"
         tags:
           domains: [simplex, 'param selection', 'self prediction']
           packages: [cedarkit, pyEDM]
@@ -38,18 +38,18 @@ parts:
   - caption: "Single-dyad CCM"
     chapters:
       - shortname: "Running CCM"
-        filename: "2_CCM_single_dyad/1_run__CCMlocally"
+        filename: "notebooks/2_CCM_single_dyad/1_run__CCMlocally"
         tags:
           domains: [causality, CCM]
           packages: [cedarkit, pyEDM]
       - shortname: "Investigating an (E, τ) configuration"
-        filename: "2_CCM_single_dyad/2_plot__DataGroup_libsize_update"
+        filename: "notebooks/2_CCM_single_dyad/2_plot__DataGroup_libsize_update"
         thumbnail: libsize_rho_spread.png
         tags:
           domains: [causality, CCM, 'time series alignment']
           packages: [cedarkit, matplotlib]
       - shortname: "Comparing (E, τ) configurations"
-        filename: "2_CCM_single_dyad/3_plot__DataGroup_lag"
+        filename: "notebooks/2_CCM_single_dyad/3_plot__DataGroup_lag"
         thumbnail: lag_spread.png
         tags:
           domains: [causality, CCM, 'parameter sweep']
@@ -58,13 +58,13 @@ parts:
   - caption: "Comparing CCM results across multiple dyads"
     chapters:
       - shortname: "Core dyad CCM results"
-        filename: "3_CCM_multi_dyad/1_plot__DataGroup_grid_untreated_2x2__final_result_grid"
+        filename: "notebooks/3_CCM_multi_dyad/1_plot__DataGroup_grid_untreated_2x2__final_result_grid"
         thumbnail: untreated_results_grid.png
         tags:
           domains: [CCM, multi-dataset-analysis, 'data viz']
           packages: [cedarkit, matplotlib]
       - shortname: "Extended CCM result overview"
-        filename: "3_CCM_multi_dyad/2_plot__DataGroup_grid__final_result_grid"
+        filename: "notebooks/3_CCM_multi_dyad/2_plot__DataGroup_grid__final_result_grid"
         thumbnail: extended_results.png
         tags:
           domains: [multi-dataset-analysis, 'data viz', 'parameter sweep']
@@ -73,12 +73,12 @@ parts:
   - caption: "Testing simple correlation"
     chapters:
       - shortname: "Calculate correlation across lag/τ"
-        filename: "4_Extras/1_calc__corr_lag_tau_resultsgrid"
+        filename: "notebooks/4_Extras/1_calc__corr_lag_tau_resultsgrid"
         tags:
           domains: [correlation]
           packages: [numpy, pandas]
       - shortname: "Simple correlation results across lag/τ"
-        filename: "4_Extras/2_plot__corr_lag_tau_resultsgrid"
+        filename: "notebooks/4_Extras/2_plot__corr_lag_tau_resultsgrid"
         thumbnail: corr_exp.png
         tags:
           domains: [correlation, 'data viz']
