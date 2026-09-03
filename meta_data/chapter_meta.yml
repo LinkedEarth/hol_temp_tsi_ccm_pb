@@ -1,92 +1,87 @@
-shortname: "HoloCCM: Solar Influence on Holocene Climate"
+shortname: "HoloCCM"
 type: Paleobook
 description: "Causal analysis of the TSI-temperature relationship over the Holocene using Convergent Cross-Mapping"
 thumbnail: logo.png
 
 parts:
-  - caption: "Part 1: Data Preparation & Exploration"
+  - caption: "Data Preparation & Exploration"
     chapters:
-      - shortname: "Standardize Time Axes"
-        filename: "notebooks/0_Datasets/1_setup__standardize_time_axes"
+      - shortname: "Standardize time axes"
+        filename: "0_Datasets/1_setup__standardize_time_axes"
         tags:
-          domains: [data-processing, time-series]
+          domains: ['common time', 'data-processing']
           packages: [xarray, pandas]
-      - shortname: "Detrending & High-Pass Filtering (Figure S5)"
-        filename: "notebooks/0_Datasets/2_setup__detrend_highpass_1kyr"
+      - shortname: "Detrending & high-pass filtering"
+        filename: "0_Datasets/2_setup__detrend_highpass_1kyr"
         tags:
-          domains: [data-processing, time-series]
+          domains: [data-processing, filtering, detrending]
           packages: [pyleoclim, pandas]
-      - shortname: "Raw Data & Power Spectra (Figures 1 & S5)"
-        filename: "notebooks/0_Datasets/3_plot__Fig1_real_ts_psd_unified"
+      - shortname: "Visualizing time series & power spectra"
+        filename: "0_Datasets/3_plot__Fig1_real_ts_psd_unified"
         tags:
-          domains: [data-exploration, spectral-analysis]
+          domains: ['data viz', 'spectral analysis', 'solar forcing', 'Holocene temp']
           packages: [pyleoclim, matplotlib]
 
-  - caption: "Part 2: Embedding & Methodology"
+  - caption: "Choosing an embedding"
     chapters:
-      - shortname: "Choosing E and τ (Figure S1)"
-        filename: "notebooks/1_Embedding/1_plot__FigS1_embedding"
+      - shortname: "Interpreting embedding params: E & τ"
+        filename: "1_Embedding/1_plot__FigS1_embedding"
         tags:
-          domains: [methodology, time-delay-embedding]
+          domains: ['time delay embedding', 'data viz']
           packages: [cedarkit, matplotlib]
-      - shortname: "Simplex Self-Prediction (Figure S2)"
-        filename: "notebooks/1_Embedding/2_plot__FigS2_simplex"
+      - shortname: "Determining E & τ with Simplex"
+        filename: "1_Embedding/2_plot__FigS2_simplex"
         tags:
-          domains: [methodology, time-delay-embedding]
+          domains: [simplex, 'param selection', 'self prediction']
           packages: [cedarkit, pyEDM]
 
-  - caption: "Part 3: CCM — From Single Run to Parameter Sweep"
+  - caption: "Single-dyad CCM"
     chapters:
-      - shortname: "A Single CCM Calculation"
-        filename: "notebooks/2_CCM_single_dyad/1_run__CCMlocally"
+      - shortname: "Running CCM"
+        filename: "2_CCM_single_dyad/1_run__CCMlocally"
         tags:
           domains: [causality, CCM]
           packages: [cedarkit, pyEDM]
-      - shortname: "Library Size–ρ Trajectories Across Lags (Figure S3)"
-        filename: "notebooks/2_CCM_single_dyad/2_plot__DataGroup_libsize_update"
+      - shortname: "Investigating an (E, τ) configuration"
+        filename: "2_CCM_single_dyad/2_plot__DataGroup_libsize_update"
         thumbnail: libsize_rho_spread.png
         tags:
-          domains: [causality, CCM, results]
+          domains: [causality, CCM, 'time series alignment']
           packages: [cedarkit, matplotlib]
-      - shortname: "Final ρ Across (E, τ) Configurations (Figure S4)"
-        filename: "notebooks/2_CCM_single_dyad/3_plot__DataGroup_lag"
+      - shortname: "Comparing (E, τ) configurations"
+        filename: "2_CCM_single_dyad/3_plot__DataGroup_lag"
         thumbnail: lag_spread.png
         tags:
-          domains: [causality, CCM, results]
+          domains: [causality, CCM, 'parameter sweep']
           packages: [cedarkit, matplotlib]
 
-  - caption: "Part 4: Multiplots — Results Across Variables"
+  - caption: "Comparing CCM results across multiple dyads"
     chapters:
-      - shortname: "Assemble Results Across Dyads"
-        filename: "notebooks/3_CCM_multi_dyad/0_calc__final_result_grid"
-        tags:
-          domains: [causality, multi-dataset-analysis]
-          packages: [cedarkit, pandas, pyarrow]
-      - shortname: "Main Result Grid (Figure 3)"
-        filename: "notebooks/3_CCM_multi_dyad/1_plot__DataGroup_grid_untreated_2x2__final_result_grid"
+      - shortname: "Core dyad CCM results"
+        filename: "3_CCM_multi_dyad/1_plot__DataGroup_grid_untreated_2x2__final_result_grid"
         thumbnail: untreated_results_grid.png
         tags:
-          domains: [results, multi-dataset-analysis]
+          domains: [CCM, multi-dataset-analysis, 'data viz']
           packages: [cedarkit, matplotlib]
-      - shortname: "Full Result Overview (Figures S6, S7, S9)"
-        filename: "notebooks/3_CCM_multi_dyad/2_plot__DataGroup_grid__final_result_grid"
+      - shortname: "Extended CCM result overview"
+        filename: "3_CCM_multi_dyad/2_plot__DataGroup_grid__final_result_grid"
         thumbnail: extended_results.png
         tags:
-          domains: [results, multi-dataset-analysis]
+          domains: [multi-dataset-analysis, 'data viz', 'parameter sweep']
           packages: [cedarkit, matplotlib]
 
-  - caption: "Supplementary Analyses"
+  - caption: "Testing simple correlation"
     chapters:
-      - shortname: "Calculate Correlation vs. Lag/Tau"
-        filename: "notebooks/4_Extras/1_calc__corr_lag_tau_resultsgrid"
+      - shortname: "Calculate correlation across lag/τ"
+        filename: "4_Extras/1_calc__corr_lag_tau_resultsgrid"
         tags:
-          domains: [supplementary, correlation]
+          domains: [correlation]
           packages: [numpy, pandas]
-      - shortname: "Simple Correlation, All Dyads (Figure S8)"
-        filename: "notebooks/4_Extras/2_plot__corr_lag_tau_resultsgrid"
+      - shortname: "Simple correlation results across lag/τ"
+        filename: "4_Extras/2_plot__corr_lag_tau_resultsgrid"
         thumbnail: corr_exp.png
         tags:
-          domains: [supplementary, correlation]
+          domains: [correlation, 'data viz']
           packages: [matplotlib, pandas]
 
 #  - caption: "Utilities: CCM Configuration"
