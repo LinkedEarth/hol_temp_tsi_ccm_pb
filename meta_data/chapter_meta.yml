@@ -22,7 +22,7 @@ parts:
         filename: "notebooks/0_Datasets/3_plot__Fig1_real_ts_psd_unified"
         thumbnail: viz_ts_psd.png
         tags:
-          domains: ['data viz', 'spectral analysis', 'solar forcing', 'Holocene temp']
+          domains: ['data viz', 'solar forcing', 'Holocene temp']
           packages: [pyleoclim, matplotlib]
 
   - caption: "Choosing an embedding"
@@ -44,6 +44,7 @@ parts:
     chapters:
       - shortname: "Running CCM"
         filename: "notebooks/2_CCM_single_dyad/1_run__CCMlocally"
+        thumbnail: ccm_run.png
         tags:
           domains: [causality, CCM]
           packages: [cedarkit, pyEDM]
